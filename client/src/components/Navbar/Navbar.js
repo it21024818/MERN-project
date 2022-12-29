@@ -4,8 +4,8 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
 
-import memoriesLogo from '../../images/memoriesLogo.png';
-import memoriesText from '../../images/memoriesText.png';
+import feastlyText from '../../images/feastlyText.png';
+import feastlyLogo from '../../images/feastlyLogo.png';
 import * as actionType from '../../constants/actionTypes';
 import useStyles from './styles';
 
@@ -39,8 +39,8 @@ const Navbar = () => {
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
       <Link to="/" className={classes.brandContainer}>
-        <img component={Link} to="/" src={memoriesText} alt="icon" height="45px" />
-        <img className={classes.image} src={memoriesLogo} alt="icon" height="40px" />
+        <img component={Link} to="/" src={feastlyText} alt="icon" height="45px" />
+        <img className={classes.image} src={feastlyLogo} alt="icon" height="70px" />
       </Link>
       <Toolbar className={classes.toolbar}>
         {user?.result ? (
@@ -50,7 +50,7 @@ const Navbar = () => {
             <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
           </div>
         ) : (
-          <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
+          <Button component={Link} to="/auth" variant="contained" color="secondary">Sign In</Button>
         )}
       </Toolbar>
     </AppBar>

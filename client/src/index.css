@@ -1,6 +1,10 @@
 
 body {
-    background-color: #f7f8fc;
+    background-color: #FFE4E1;
+    /* background-image: url("../memoriesLogo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 * {
